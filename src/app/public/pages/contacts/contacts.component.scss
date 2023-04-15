@@ -1,0 +1,88 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bbcddb;
+}
+
+section {
+  position: relative;
+  height: 450px;
+  width: 1075px;
+  display: flex;
+  align-items: center;
+}
+
+// section .card .image{
+//     height: 140px;
+//     width: 140px;
+//     border-radius: 50%;
+//     padding: 3px;
+//     background: #202ef3;
+// }
+
+// section .card .image img{
+//     height: 100%;
+//     width: 100%;
+//     object-fit: cover;
+//     border-radius: 50%;
+//     border: 3px solid #fff;
+// }
+
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px 0;
+  width: 280px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: #236cf1;
+  border-radius: 20px 20px 0 0;
+}
+
+.listaContactos {
+  width: 100vw;
+  overflow-x: scroll;
+  display: flex;
+  gap: 20px;
+}
+
+.agregar {
+  display: flex;
+  flex-direction: column;
+  // align-self: flex-start;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  // background: rgba(42, 65, 87, 0.24);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 40px;
+}
+
+a {
+  font-size: 80px;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 100%;
+  //border: 2px solid black;
+  color: #fff;
+}

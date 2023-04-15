@@ -1,0 +1,22 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="contacts.component.scss" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+<body>
+  <a [routerLink]="['/agregar']">+</a>
+  <section>
+    <div class="listaContactos">
+      <app-contact-card
+        class="swiper-slide card"
+        *ngFor="let contacto of contacts"
+        [contacto]="contacto"
+      ></app-contact-card>
+    </div>
+  </section>
+</body>

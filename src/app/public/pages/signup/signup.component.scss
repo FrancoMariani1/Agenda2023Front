@@ -1,0 +1,43 @@
+.container {
+  background-color: #bbcddb;
+  background-size: 100vh;
+}
+
+.Registrarse-header {
+  color: black;
+  text-align: center;
+  font-size: 300%;
+}
+.Registrarse-Form {
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10%;
+  margin: 5% auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #99b0c9;
+  border-radius: 20px;
+  width: 350px;
+  height: 330px;
+
+  .btn-registro {
+    height: 3vw;
+    border-radius: 8px;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.3vw;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .btn-guardar {
+    background: limegreen;
+  }
+
+  .btn-cancelar {
+    background: indianred;
+  }
+}

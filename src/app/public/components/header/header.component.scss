@@ -1,0 +1,43 @@
+header {
+  background-color: #333; /* set the background color of the header */
+  color: #fff; /* set the text color of the header */
+  display: flex; /* use flexbox to align the header content */
+  justify-content: space-between; /* align the content to the left and right edges */
+  padding: 14px 20px; /* add some padding around the content */
+}
+
+nav ul {
+  list-style: none; /* remove the bullet points from the list */
+  margin: 0; /* remove the default margin from the list */
+  padding: 0; /* remove the default padding from the list */
+  display: flex; /* use flexbox to align the list items horizontally */
+}
+
+nav li {
+  margin-left: 10px; /* add some space between the list items */
+}
+
+nav a {
+  color: #fff; /* set the text color of the links */
+  text-decoration: none; /* remove the underline from the links */
+  padding: 10px; /* add some padding around the links */
+  border-radius: 5px; /* add rounded corners to the links */
+  transition: background-color 0.3s ease-in-out; /* add a smooth transition to the background color */
+}
+
+nav a:hover {
+  background-color: #555; /* change the background color of the link on hover */
+}
+
+// header {
+//   background-color: black;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 0;
+// }
+
+// ul {
+//   display: flex;
+//   flex-direction: row;
+// }
