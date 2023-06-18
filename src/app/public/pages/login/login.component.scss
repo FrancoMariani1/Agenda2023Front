@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5% auto;
+  background-color: #99b0c9;
+  border-radius: 20px;
+  width: 400px;
+  height: 330px;
+}
+
+.inicarsesion-header {
+  color: black;
+  text-align: center;
+  font-size: 300%;
+}
+
+.inputs {
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+}
+
+.btn-iniciar-sesion {
+  height: 3vw;
+  color: white;
+  border-radius: 8px;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1.3vw;
+}

@@ -18,20 +18,34 @@ export class LoginComponent implements OnInit {
     Password: '',
   };
 
-  // async agregar(form: NgForm) {
-  //   //Valor del formulario para no usar NgModel
-  //   console.log(form.value);
-  //   const token = await this.auth.login(form.value);
-  //   if (token) this.router.navigate(['']);
-  // }
-
-  // async login(form: NgForm) {
-  //   //Valor del formulario para no usar NgModel
-  //   console.log(form.value);
-  //   const token = await this.auth.login(form.value);
-  //   if (token) this.router.navigate(['']);
-  // }
+  login(form: NgForm) {
+    // Verificar si el formulario es válido (opcional)
+    if (form.valid) {
+      // Redireccionar al usuario a la página principal o a la ruta deseada
+      this.router.navigate(['']);
+    }
+  }
 }
+
+//   authData: iAuthRequest = {
+//     UserName: '',
+//     Password: '',
+//   };
+
+//   async agregar(form: NgForm) {
+//     //Valor del formulario para no usar NgModel
+//     console.log(form.value);
+//     const token = await this.auth.login(form.value);
+//     if (token) this.router.navigate(['']);
+//   }
+
+//   async login(form: NgForm) {
+//     //Valor del formulario para no usar NgModel
+//     console.log(form.value);
+//     const token = await this.auth.login(form.value);
+//     if (token) this.router.navigate(['']);
+//   }
+// }
 
 // export class IniciarComponent implements OnInit {
 

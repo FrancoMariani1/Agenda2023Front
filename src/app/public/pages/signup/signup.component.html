@@ -1,1 +1,88 @@
-<h1>Sign Up</h1>
+<div id="container">
+  <h1 class="Registrarse-header">Mi agenda virtual</h1>
+  <form (ngSubmit)="registrarse(form)" #form="ngForm" class="Registrarse-Form">
+    <input
+      type="file"
+      name="myImage"
+      accept="image/png, image/gif, image/jpeg"
+    />
+
+    <div class="inputs">
+      <label for="Nombre"></label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        autocomplete="nombre"
+        placeholder="Nombre"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Apellido"></label>
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        autocomplete="apellido"
+        placeholder="Apellido"
+      />
+    </div>
+    <div class="inputs">
+      <label for="UserName"></label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        autocomplete="username"
+        placeholder="Nombre de Usuario"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Password"></label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        autocomplete="Contraseña"
+        placeholder="Ingrese su contraseña"
+        [(ngModel)]="authData.Password"
+        [minLength]="6"
+        #password="ngModel"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Telefono"></label>
+      <input
+        type="number"
+        name="telefono"
+        id="telefono"
+        autocomplete="telefono"
+        placeholder="Telefono"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Email"></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        autocomplete="email"
+        placeholder="Email"
+        [(ngModel)]="authData.UserName"
+        #email="ngModel"
+        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      />
+    </div>
+    <!-- <div class="inputs">
+            <label for="Descripcion"></label>
+            <input type="text" name="telefono" id="telefono" autocomplete="telefono" placeholder="Descripcion"
+            >
+          </div>  -->
+    <div>
+      <button class="btn-registro btn-guardar" type="submit">Guardar</button>
+      <button class="btn-registro btn-cancelar" [routerLink]="['/']">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
