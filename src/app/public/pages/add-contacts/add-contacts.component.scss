@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90.6vh;
+  width: 99vw;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+form {
+  height: 50vh;
+  width: 99vw;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  justify-content: space-evenly;
+}
+
+// .image{
+//     height: 20%;
+//     width: 10%;
+//     object-fit: cover;
+//     border-radius: 50%;
+//     border: 3px solid #fff;
+// }
+
+input[type="file"] {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.image-upload img {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.btn-registro {
+  height: 3vw;
+  border-radius: 8px;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.3vw;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn-guardar {
+  background: limegreen;
+}
+
+.btn-cancelar {
+  background: indianred;
+}

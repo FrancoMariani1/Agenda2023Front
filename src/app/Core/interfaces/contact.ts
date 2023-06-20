@@ -1,3 +1,4 @@
+import { Location } from './location';
 export interface Contact {
   id?: number;
   name: string;
@@ -7,5 +8,5 @@ export interface Contact {
   celularNumber: number;
   description: string;
   avatar?: string;
-  location?: Location;
+  location: Location;
 }

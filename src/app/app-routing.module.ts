@@ -24,6 +24,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./public/pages/signup/signup.module').then((m) => m.SignupModule),
   },
+  {
+    path: 'add-contacts',
+    loadChildren: () =>
+      import('./public/pages/add-contacts/add-contacts.module').then(
+        (m) => m.AddContactsModule
+      ),
+  },
 ];
 
 @NgModule({

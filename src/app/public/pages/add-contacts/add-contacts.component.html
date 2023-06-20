@@ -1,0 +1,133 @@
+<div id="container">
+  <h1>Agregar contacto</h1>
+  <form (ngSubmit)="addContact(form)" #form="ngForm">
+    <div class="image-upload">
+      <label for="file-input">
+        <img
+          src="https://us.123rf.com/450wm/alexwhite/alexwhite1503/alexwhite150303616/37937871-c%C3%A1mara-icono-plana-azul.jpg"
+        />
+      </label>
+
+      <input
+        id="file-input"
+        type="file"
+        style="display: none"
+        name="myImage"
+        accept="image/png, image/gif, image/jpeg"
+      />
+    </div>
+
+    <!-- <div class="inputs">
+      
+      <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg"/>
+      
+      </div>  -->
+
+    <div class="inputs">
+      <label for="Nombre"></label>
+      <input
+        type="text"
+        name="nombre"
+        [(ngModel)]="contact.name"
+        id="nombre"
+        autocomplete="nombre"
+        placeholder="Nombre"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Apellido"></label>
+      <input
+        type="text"
+        name="apellido"
+        [(ngModel)]="contact.lastName"
+        id="apellido"
+        autocomplete="apellido"
+        placeholder="Apellido"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Celular"></label>
+      <input
+        type="number"
+        name="celular"
+        [(ngModel)]="contact.celularNumber"
+        id="celular"
+        autocomplete="celular"
+        placeholder="Celular"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Telefono"></label>
+      <input
+        type="number"
+        name="telefono"
+        [(ngModel)]="contact.telephoneNumber"
+        id="telefono"
+        autocomplete="telefono"
+        placeholder="Teléfono"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Email"></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        autocomplete="email"
+        placeholder="Email"
+        [(ngModel)]="contact.email"
+        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Descripcion"></label>
+      <input
+        type="text"
+        [(ngModel)]="contact.description"
+        name="telefono"
+        id="telefono"
+        autocomplete="telefono"
+        placeholder="Descripción"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Ubicacion"></label>
+      <input
+        type="text"
+        [(ngModel)]="contact.location.description"
+        name="description"
+        id="ubicacion"
+        autocomplete="ubicacion"
+        placeholder="Ubicación"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Latitude"></label>
+      <input
+        type="number"
+        [(ngModel)]="contact.location.latitude"
+        name="latitude"
+        id="latitude"
+        autocomplete="latitude"
+        placeholder="Latitud"
+      />
+    </div>
+    <div class="inputs">
+      <label for="Longitude"></label>
+      <input
+        type="number"
+        [(ngModel)]="contact.location.longitude"
+        name="longitude"
+        id="longitude"
+        autocomplete="longitude"
+        placeholder="Longitud"
+      />
+    </div>
+    <div>
+      <button class="btn-registro btn-guardar" type="submit">Guardar</button>
+      <button class="btn-registro btn-cancelar" [routerLink]="['/contactos']">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>

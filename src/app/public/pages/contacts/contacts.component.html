@@ -9,13 +9,13 @@
 />
 
 <body>
-  <a [routerLink]="['/agregar']">+</a>
+  <a [routerLink]="['/add-contacts']">+</a>
   <section>
     <div class="listaContactos">
       <app-contact-card
         class="swiper-slide card"
-        *ngFor="let contacto of contacts"
-        [contacto]="contacto"
+        *ngFor="let contact of contacts"
+        [contact]="contact"
       ></app-contact-card>
     </div>
   </section>

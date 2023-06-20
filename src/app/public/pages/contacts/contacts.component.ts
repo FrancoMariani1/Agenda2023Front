@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/app/Core/interfaces/contact';
-import { ContactServicesService } from 'src/app/services/contact-services.service';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contacts',
@@ -10,7 +10,7 @@ import { ContactServicesService } from 'src/app/services/contact-services.servic
 export class ContactsComponent implements OnInit {
   contacts: Contact[] = [];
 
-  constructor(public us: ContactServicesService) {}
+  constructor(private us: ContactService) {}
 
   ngOnInit(): void {
     this.getData();
@@ -31,11 +31,11 @@ export class ContactsComponent implements OnInit {
       email: 'test@test.com',
       telephoneNumber: 123,
       celularNumber: 123,
-      UserName: 'prueba1',
-      Location: {
-        Id: 1,
-        Latitude: 0.555,
-        Longitude: 0.444,
+      userName: 'prueba1',
+      location: {
+        id: 1,
+        latitude: 0.555,
+        longitude: 0.444,
         description: 'Casa',
       },
     };
