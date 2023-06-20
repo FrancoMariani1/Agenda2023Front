@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddEditContactComponent } from './public/components/add-edit-contact/add-edit-contact.component';
@@ -18,7 +19,7 @@ import { ContactCardComponent } from './public/components/contact-card/contact-c
     HeaderComponent,
     // ContactCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

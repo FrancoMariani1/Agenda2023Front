@@ -25,12 +25,12 @@ export class ContactService {
       }, 300);
     }); */
 
-    const data = await fetch(BACKEND_URL + '/api/Contact/');
+    const data = await fetch(BACKEND_URL + '/api/contact/');
     return await data.json();
   }
 
   async getContact(id: number): Promise<Contact[]> {
-    const data = await fetch(BACKEND_URL + '/api/Contact/GetOne/' + id);
+    const data = await fetch(BACKEND_URL + '/api/contact/GetOne/' + id);
     return await data.json();
   }
 

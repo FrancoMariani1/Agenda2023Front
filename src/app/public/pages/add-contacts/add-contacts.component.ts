@@ -33,6 +33,7 @@ export class AddContactsComponent {
 
   async addContact(form: NgForm): Promise<void> {
     if (form.valid) {
+      console.log('Contacto a agregar:', this.contact);
       try {
         const response = await this.us.AddContact(this.contact);
         console.log('Contacto agregado:', response);
