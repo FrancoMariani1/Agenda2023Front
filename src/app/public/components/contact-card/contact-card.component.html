@@ -24,11 +24,49 @@
       Eliminar <i class="fa-solid fa-trash-can"></i>
     </button>
     <!-- <button class="delete">Eliminar</button> -->
-    <button class="editar">
+    <button class="editar" (click)="showEditForm = true">
       Editar <i class="fa-solid fa-wand-magic-sparkles"></i>
     </button>
   </div>
 </div>
+
 <div id="emergente" *ngIf="emergente">
   <p class="emergente">Ventana emergente</p>
 </div>
+
+<!-- <div id="editForm" *ngIf="showEditForm">
+  <h3>Editar contacto</h3>
+  <form (submit)="updateContact()">
+    <div>
+      <label for="name">Nombre:</label>
+      <input
+        type="text"
+        id="name"
+        [(ngModel)]="editedContact.name"
+        name="name"
+        required
+      />
+    </div>
+    <div>
+      <label for="description">Descripción:</label>
+      <textarea
+        id="description"
+        [(ngModel)]="editedContact.description"
+        name="description"
+        required
+      ></textarea>
+    </div>
+    <div>
+      <label for="avatar">Avatar:</label>
+      <input
+        type="text"
+        id="avatar"
+        [(ngModel)]="editedContact.avatar"
+        name="avatar"
+        required
+      />
+    </div>
+    <button type="submit">Guardar cambios</button>
+    <button type="button" (click)="cancelEdit()">Cancelar</button>
+  </form>
+</div> -->

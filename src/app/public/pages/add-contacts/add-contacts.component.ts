@@ -28,7 +28,7 @@ export class AddContactsComponent {
   };
 
   contact: Contact = {
-    id: 0,
+    // id: 0,
     celularNumber: 0,
     description: '',
     email: '',
