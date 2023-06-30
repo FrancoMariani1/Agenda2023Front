@@ -3,9 +3,7 @@
   <form (ngSubmit)="addContact(form)" #form="ngForm">
     <div class="image-upload">
       <label for="file-input">
-        <img
-          src="https://us.123rf.com/450wm/alexwhite/alexwhite1503/alexwhite150303616/37937871-c%C3%A1mara-icono-plana-azul.jpg"
-        />
+        <img [src]="contact.avatar" />
       </label>
 
       <input
@@ -13,6 +11,7 @@
         type="file"
         style="display: none"
         name="myImage"
+        (change)="fileChangeEvent($event)"
         accept="image/png, image/gif, image/jpeg"
       />
     </div>
@@ -121,6 +120,17 @@
         id="longitude"
         autocomplete="longitude"
         placeholder="Longitud"
+      />
+    </div>
+    <div class="inputs">
+      <label for="foto"></label>
+      <input
+        type="text"
+        name="foto"
+        [(ngModel)]="contact.avatar"
+        id="foto"
+        autocomplete="Foto Url"
+        placeholder="Foto Url"
       />
     </div>
     <div>

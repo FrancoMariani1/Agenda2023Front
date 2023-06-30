@@ -14,8 +14,8 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   authData: iAuthRequest = {
-    UserName: '',
-    Password: '',
+    email: '',
+    password: '',
   };
 
   registrarse(form: NgForm) {

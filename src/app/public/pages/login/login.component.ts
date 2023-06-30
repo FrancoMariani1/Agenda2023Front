@@ -2,30 +2,54 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { iAuthRequest } from 'src/app/Core/interfaces/auth';
+import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
-  constructor(private router: Router) {}
-
-  ngOnInit(): void {}
+export class LoginComponent {
+  constructor(private router: Router, private auth: AuthenticationService) {}
 
   authData: iAuthRequest = {
-    UserName: '',
-    Password: '',
+    email: '',
+    password: '',
   };
 
-  login(form: NgForm) {
-    // Verificar si el formulario es válido (opcional)
-    if (form.valid) {
-      // Redireccionar al usuario a la página principal o a la ruta deseada
-      this.router.navigate(['']);
-    }
+  async login(form: NgForm) {
+    console.log('Login button clicked');
+    //Valor del formulario para no usar NgModel
+    console.log(form.value);
+    const token = await this.auth.login(form.value);
+    if (token) this.router.navigate(['']);
   }
 }
+
+// ngOnInit(): void {}
+
+// authData: iAuthRequest = {
+//   email: '',
+//   password: '',
+// };
+
+// async agregar(form: NgForm) {
+//   //Valor del formulario para no usar NgModel
+//   console.log(form.value);
+//   const token = await this.auth.login(form.value);
+//   if (token) this.router.navigate(['']);
+// }
+
+// const token = await this.auth.login(form.value);
+// if (token) this.router.navigate(['']);
+
+// login(form: NgForm) {
+//   // Verificar si el formulario es válido (opcional)
+//   if (form.valid) {
+//     // Redireccionar al usuario a la página principal o a la ruta deseada
+//     this.router.navigate(['']);
+//   }
+// }
 
 //   authData: iAuthRequest = {
 //     UserName: '',

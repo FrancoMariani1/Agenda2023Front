@@ -2,11 +2,13 @@ import { Location } from './location';
 export interface Contact {
   id?: number;
   name: string;
-  lastName: string;
+  lastName?: string;
   email?: string;
   telephoneNumber?: number;
   celularNumber: number;
-  description: string;
+  description?: string;
   avatar?: string;
   location: Location;
 }
+
+export const contactos: Contact[] = [];

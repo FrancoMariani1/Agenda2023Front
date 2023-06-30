@@ -1,3 +1,5 @@
+<!-- //quiero que el button delete me elimine el contacto. Que tengo que hacer?  -->
+
 <div class="card-content">
   <div class="image">
     <img src="{{ contact.avatar }}" alt="" (click)="emergente = !emergente" />
@@ -18,7 +20,10 @@
     <i class="far fa-star"></i>
   </div>
   <div class="button">
-    <button class="delete">Eliminar</button>
+    <button class="delete" (click)="contact.id && deleteContact(contact.id)">
+      Eliminar <i class="fa-solid fa-trash-can"></i>
+    </button>
+    <!-- <button class="delete">Eliminar</button> -->
     <button class="editar">
       Editar <i class="fa-solid fa-wand-magic-sparkles"></i>
     </button>

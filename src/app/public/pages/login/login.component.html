@@ -13,7 +13,7 @@
         id="email"
         autocomplete="email"
         placeholder="Ingrese su email"
-        [(ngModel)]="authData.UserName"
+        [(ngModel)]="authData.email"
         #email="ngModel"
       />
     </div>
@@ -28,8 +28,8 @@
         id="password"
         autocomplete="current-password"
         placeholder="Ingrese su contraseña"
-        [(ngModel)]="authData.Password"
-        [minLength]="6"
+        [(ngModel)]="authData.password"
+        [minLength]="3"
         #password="ngModel"
       />
     </div>
@@ -37,7 +37,7 @@
       La contraseña no es valida.
     </div>
     <div>
-      <button class="btn-iniciar-sesion" type="submit" [disabled]="form.valid">
+      <button class="btn-iniciar-sesion" type="submit" [disabled]="!form.valid">
         Iniciar sesion
       </button>
     </div>

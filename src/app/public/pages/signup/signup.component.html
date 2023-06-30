@@ -1,11 +1,11 @@
 <div id="container">
   <h1 class="Registrarse-header">Mi agenda virtual</h1>
   <form (ngSubmit)="registrarse(form)" #form="ngForm" class="Registrarse-Form">
-    <input
+    <!-- <input
       type="file"
       name="myImage"
       accept="image/png, image/gif, image/jpeg"
-    />
+    /> -->
 
     <div class="inputs">
       <label for="Nombre"></label>
@@ -27,7 +27,7 @@
         placeholder="Apellido"
       />
     </div>
-    <div class="inputs">
+    <!-- <div class="inputs">
       <label for="UserName"></label>
       <input
         type="text"
@@ -35,6 +35,19 @@
         id="username"
         autocomplete="username"
         placeholder="Nombre de Usuario"
+      />
+    </div> -->
+    <div class="inputs">
+      <label for="Email"></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        autocomplete="email"
+        placeholder="Email"
+        [(ngModel)]="authData.email"
+        #email="ngModel"
+        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
       />
     </div>
     <div class="inputs">
@@ -45,12 +58,12 @@
         id="password"
         autocomplete="Contraseña"
         placeholder="Ingrese su contraseña"
-        [(ngModel)]="authData.Password"
+        [(ngModel)]="authData.password"
         [minLength]="6"
         #password="ngModel"
       />
     </div>
-    <div class="inputs">
+    <!-- <div class="inputs">
       <label for="Telefono"></label>
       <input
         type="number"
@@ -59,20 +72,8 @@
         autocomplete="telefono"
         placeholder="Telefono"
       />
-    </div>
-    <div class="inputs">
-      <label for="Email"></label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        autocomplete="email"
-        placeholder="Email"
-        [(ngModel)]="authData.UserName"
-        #email="ngModel"
-        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-      />
-    </div>
+    </div> -->
+
     <!-- <div class="inputs">
             <label for="Descripcion"></label>
             <input type="text" name="telefono" id="telefono" autocomplete="telefono" placeholder="Descripcion"
