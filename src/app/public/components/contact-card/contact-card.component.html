@@ -4,28 +4,34 @@
   <div class="image">
     <img src="{{ contact.avatar }}" alt="" (click)="emergente = !emergente" />
   </div>
-  <div class="media-icons">
+  <div
+    class="media-icons"
+    (click)="verMapa(contact.location.latitude, contact.location.longitude)"
+  >
     <i class="fa-sharp fa-solid fa-earth-americas"></i>
-    <i class="fa-brands fa-whatsapp"></i>
+    <!-- <i class="fa-brands fa-whatsapp"></i> -->
   </div>
   <div class="name-descripcion">
     <span class="name">{{ contact.name }}</span>
-    <span class="descripcion">{{ contact.description }}</span>
+    <span class="celular">{{ contact.celularNumber }}</span>
   </div>
-  <div class="rating">
+  <!-- <div class="rating">
     <i class="fas fa-star"></i>
     <i class="fas fa-star"></i>
     <i class="fas fa-star"></i>
     <i class="far fa-star"></i>
     <i class="far fa-star"></i>
-  </div>
+  </div> -->
   <div class="button">
     <button class="delete" (click)="contact.id && deleteContact(contact.id)">
       Eliminar <i class="fa-solid fa-trash-can"></i>
     </button>
     <!-- <button class="delete">Eliminar</button> -->
-    <button class="editar" (click)="showEditForm = true">
-      Editar <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <button class="editar">
+      <a [routerLink]="['/edit-contact/' + contact.id]">
+        <!-- <a [routerLink]="'/edit-contact' + contact.id"> -->
+        Editar <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </a>
     </button>
   </div>
 </div>

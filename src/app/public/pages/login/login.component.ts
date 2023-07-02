@@ -22,7 +22,11 @@ export class LoginComponent {
     //Valor del formulario para no usar NgModel
     console.log(form.value);
     const token = await this.auth.login(form.value);
-    if (token) this.router.navigate(['']);
+    if (token) {
+      this.router.navigate(['/contacts']).then(() => {
+        window.location.reload();
+      });
+    }
   }
 }
 

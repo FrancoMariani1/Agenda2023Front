@@ -48,7 +48,6 @@ export class AuthenticationService {
     };
 
     localStorage.setItem('session', JSON.stringify(session));
-    //window.location.reload();
   }
 
   async getMe() {

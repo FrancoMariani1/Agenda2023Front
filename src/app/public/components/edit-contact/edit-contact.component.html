@@ -1,0 +1,136 @@
+<!-- <form (ngSubmit)="updateContact(form)" #form="ngForm"> -->
+
+<form (ngSubmit)="saveChanges()" #form="ngForm">
+  <div class="image-upload">
+    <label for="file-input">
+      <img [src]="contact.avatar" />
+    </label>
+
+    <input
+      id="file-input"
+      type="file"
+      style="display: none"
+      name="myImage"
+      (change)="fileChangeEvent($event)"
+      accept="image/png, image/gif, image/jpeg"
+    />
+  </div>
+
+  <div class="inputs">
+    <label for="Nombre"></label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="contact.name"
+      id="nombre"
+      autocomplete="nombre"
+      placeholder="Nombre"
+    />
+  </div>
+  <div class="inputs">
+    <label for="Apellido"></label>
+    <input
+      type="text"
+      name="lastName"
+      [(ngModel)]="contact.lastName"
+      id="apellido"
+      autocomplete="apellido"
+      placeholder="Apellido"
+    />
+  </div>
+  <div class="inputs">
+    <label for="Celular"></label>
+    <input
+      type="number"
+      name="celularNumber"
+      [(ngModel)]="contact.celularNumber"
+      id="celular"
+      autocomplete="celular"
+      placeholder="Celular"
+    />
+  </div>
+  <div class="inputs">
+    <label for="Telefono"></label>
+    <input
+      type="number"
+      name="telephoneNumber"
+      [(ngModel)]="contact.telephoneNumber"
+      id="telefono"
+      autocomplete="telefono"
+      placeholder="Teléfono"
+    />
+  </div>
+  <div class="inputs">
+    <label for="Email"></label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      autocomplete="email"
+      placeholder="Email"
+      [(ngModel)]="contact.email"
+      pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+    />
+  </div>
+  <div class="inputs">
+    <label for="Descripcion"></label>
+    <input
+      type="text"
+      [(ngModel)]="contact.description"
+      name="description"
+      id="telefono"
+      autocomplete="telefono"
+      placeholder="Descripción"
+    />
+  </div>
+  <div class="inputs" *ngIf="contact.location">
+    <label for="Ubicacion"></label>
+    <input
+      type="text"
+      [(ngModel)]="contact.location.description"
+      name="location"
+      id="ubicacion"
+      autocomplete="ubicacion"
+      placeholder="Ubicación"
+    />
+  </div>
+  <div class="inputs" *ngIf="contact.location">
+    <label for="Latitude"></label>
+    <input
+      type="number"
+      [(ngModel)]="contact.location.latitude"
+      name="latitude"
+      id="latitude"
+      autocomplete="latitude"
+      placeholder="Latitud"
+    />
+  </div>
+  <div class="inputs" *ngIf="contact.location">
+    <label for="Longitude"></label>
+    <input
+      type="number"
+      [(ngModel)]="contact.location.longitude"
+      name="longitude"
+      id="longitude"
+      autocomplete="longitude"
+      placeholder="Longitud"
+    />
+  </div>
+  <div class="inputs">
+    <label for="foto"></label>
+    <input
+      type="text"
+      name="foto"
+      [(ngModel)]="contact.avatar"
+      id="foto"
+      autocomplete="Foto Url"
+      placeholder="Foto Url"
+    />
+  </div>
+  <div>
+    <button class="btn-registro btn-guardar" type="submit">Guardar</button>
+    <button class="btn-registro btn-cancelar" [routerLink]="['/contacts']">
+      Cancelar
+    </button>
+  </div>
+</form>

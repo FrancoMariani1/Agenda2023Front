@@ -21,29 +21,12 @@ export class ContactsComponent implements OnInit {
   // }
 
   async getData() {
-    const contact = {
-      id: 1,
-      name: 'test',
-      lastName: 'test',
-      avatar:
-        'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png',
-      description: 'test',
-      email: 'test@test.com',
-      telephoneNumber: 123,
-      celularNumber: 123,
-      userName: 'prueba1',
-      location: {
-        id: 1,
-        latitude: 0.555,
-        longitude: 0.444,
-        description: 'Casa',
-      },
-    };
+    this.contacts = [];
 
     try {
       this.contacts = await this.us.getContacts();
     } catch (err) {
-      this.contacts = [contact];
+      console.log(err);
     }
 
     console.log(this.contacts);

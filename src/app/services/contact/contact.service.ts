@@ -36,6 +36,7 @@ export class ContactService {
       BACKEND_URL + '/api/contact/' + id,
       this.config
     );
+    console.log(contact.data);
     return contact.data;
   }
 
@@ -47,8 +48,12 @@ export class ContactService {
     return res.status == 200;
   }
 
-  async updateContact(c: Contact): Promise<Contact> {
-    const res = await axios.put(BACKEND_URL + '/api/contact/', c, this.config);
+  async updateContact(id: number, c: Contact): Promise<Contact> {
+    const res = await axios.put(
+      BACKEND_URL + '/api/contact/' + id,
+      c,
+      this.config
+    );
     return res.data;
   }
 

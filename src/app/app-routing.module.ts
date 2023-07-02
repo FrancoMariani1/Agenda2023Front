@@ -31,6 +31,13 @@ const routes: Routes = [
         (m) => m.AddContactsModule
       ),
   },
+  {
+    path: 'edit-contact',
+    loadChildren: () =>
+      import('./public/components/edit-contact/edit-contact.module').then(
+        (m) => m.EditContactModule
+      ),
+  },
 ];
 
 @NgModule({

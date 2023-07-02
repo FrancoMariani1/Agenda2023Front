@@ -4,8 +4,8 @@ export interface Contact {
   name: string;
   lastName?: string;
   email?: string;
-  telephoneNumber?: number;
-  celularNumber: number;
+  telephoneNumber?: number | null;
+  celularNumber: number | null;
   description?: string;
   avatar?: string;
   location: Location;

@@ -29,17 +29,17 @@ export class AddContactsComponent {
 
   contact: Contact = {
     // id: 0,
-    celularNumber: 0,
+    celularNumber: null,
     description: '',
     email: '',
     name: '',
     lastName: '',
-    telephoneNumber: 0,
+    telephoneNumber: null,
     location: {
       id: 0,
       description: '',
-      latitude: 0,
-      longitude: 0,
+      latitude: null,
+      longitude: null,
     },
   };
 
