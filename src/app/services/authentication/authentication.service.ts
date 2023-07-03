@@ -76,6 +76,7 @@ export class AuthenticationService {
     console.log(token);
     if (!token) return false;
     this.setSession(token);
+    this.loggedIn = true;
     return true;
   }
 }

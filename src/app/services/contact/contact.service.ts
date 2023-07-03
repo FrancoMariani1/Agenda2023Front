@@ -1,10 +1,10 @@
-//crear el getContactById, el deleteContact y el updateContact en el service igual que el addContact y el getContacts
-
 import { Injectable } from '@angular/core';
 import { ContactCardComponent } from 'src/app/public/components/contact-card/contact-card.component';
 import { Contact } from 'src/app/Core/interfaces/contact';
 import { BACKEND_URL } from '../../Core/constants/backend';
 import axios from 'axios';
+import { Router } from '@angular/router';
+
 // import contactosMock from '../../Mock/contactosMock.json';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class ContactService {
     headers: { Authorization: `Bearer ${this.token}` },
   };
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   async getUserDetails(id: number) {
     console.log('ok');

@@ -46,6 +46,7 @@ export class EditContactComponent implements OnInit {
     } catch (error) {
       console.log('Error al actualizar contacto:', error);
     }
+    this.router.navigate(['/contacts']);
   }
 
   // updateContact(form: NgForm) {

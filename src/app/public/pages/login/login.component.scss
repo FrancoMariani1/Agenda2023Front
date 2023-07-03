@@ -1,21 +1,33 @@
+/* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Estilos del contenedor principal */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 5% auto;
-  background-color: #99b0c9;
+  background-color: #f2f2f2;
   border-radius: 20px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 330px;
+  transition: background-color 0.3s ease-in-out;
 }
 
+/* Estilos del encabezado */
 .inicarsesion-header {
-  color: black;
+  color: #333;
   text-align: center;
-  font-size: 300%;
+  font-size: 3rem;
 }
 
+/* Estilos de los inputs */
 .inputs {
   margin-top: 30px;
 }
@@ -24,13 +36,57 @@ label {
   display: block;
 }
 
+/* Estilos del botón de iniciar sesión */
 .btn-iniciar-sesion {
-  height: 3vw;
+  height: 3rem;
   color: white;
+  background-color: #6c63ff;
   border-radius: 8px;
   align-items: center;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
-  font-size: 1.3vw;
+  font-size: 1.3rem;
+  transition: background-color 0.3s ease-in-out;
 }
+
+.btn-iniciar-sesion:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 5% auto;
+//   background-color: #99b0c9;
+//   border-radius: 20px;
+//   width: 400px;
+//   height: 330px;
+// }
+
+// .inicarsesion-header {
+//   color: black;
+//   text-align: center;
+//   font-size: 300%;
+// }
+
+// .inputs {
+//   margin-top: 30px;
+// }
+
+// label {
+//   display: block;
+// }
+
+// .btn-iniciar-sesion {
+//   height: 3vw;
+//   color: white;
+//   border-radius: 8px;
+//   align-items: center;
+//   display: block;
+//   margin: 0 auto;
+//   margin-top: 20px;
+//   font-size: 1.3vw;
+// }

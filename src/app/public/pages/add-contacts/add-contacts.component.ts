@@ -60,6 +60,7 @@ export class AddContactsComponent {
       } catch (error) {
         console.log('Error al agregar contacto:', error);
       }
+      this.router.navigate(['/contacts']);
     }
   }
 

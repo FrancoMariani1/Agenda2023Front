@@ -41,7 +41,7 @@ export class ContactCardComponent implements OnInit {
       console.log('Error al eliminar contacto:', error);
     }
   }
-
+  // this.router.navigate(['/contacts']);
   // openEditDialog(id: number | undefined) {
   //   const url = `/edit-contact/${id}`;
   //   window.open(url, '_blank', 'width=600,height=400');

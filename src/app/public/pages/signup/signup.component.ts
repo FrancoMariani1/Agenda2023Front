@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { iAuthRequest } from 'src/app/Core/interfaces/auth';
 import { UserService } from 'src/app/services/user/user.service';
 import { User } from '../../../Core/interfaces/user';
+import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -17,11 +18,16 @@ export class SignupComponent implements OnInit {
     password: '',
   };
 
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private authService: AuthenticationService
+  ) {}
 
   ngOnInit(): void {}
 
   async registrarse(form: NgForm) {
+    console.log('Valid form: ', form.valid);
     if (form.valid) {
       const newUser: User = {
         name: this.authData.name,
@@ -33,7 +39,11 @@ export class SignupComponent implements OnInit {
       try {
         const res = await this.userService.AddUser(newUser);
         console.log(res);
-        this.router.navigate(['/login']);
+        this.authService.login({
+          email: this.authData.email,
+          password: this.authData.password,
+        });
+        this.router.navigate(['/contacts']);
       } catch (err) {
         console.log(err);
       }
