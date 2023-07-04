@@ -1,44 +1,200 @@
-.container {
-  background-color: #bbcddb;
-  background-size: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.Registrarse-header {
-  color: black;
-  text-align: center;
-  font-size: 300%;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2; /* Fondo del contenedor en gris claro */
 }
 
 .Registrarse-Form {
   box-sizing: border-box;
-  padding-top: 10px;
-  padding-bottom: 10%;
+  padding: 20px;
   margin: 5% auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #99b0c9;
+  background-color: #f2f2f2; /* Fondo del formulario en blanco */
   border-radius: 20px;
-  width: 350px;
-  height: 330px;
+  width: 90%;
+  max-width: 400px;
 }
 
-.Registrarse-Form .btn-registro {
-  height: 3vw;
+.Registrarse-header {
+  color: #333333; /* Texto en tono gris oscuro */
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+.inputs {
+  margin-top: 30px;
+}
+
+.btn-registro {
+  height: 3rem;
   border-radius: 8px;
   align-items: center;
   margin-top: 20px;
-  font-size: 1.3vw;
+  font-size: 1.3rem;
   color: white;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
 }
 
-.Registrarse-Form .btn-guardar {
-  background: limegreen;
+.btn-guardar {
+  background: #2ecc71; /* Botón en tono verde */
 }
 
-.Registrarse-Form .btn-cancelar {
-  background: indianred;
+.btn-cancelar {
+  background: #e74c3c; /* Botón en tono rojo */
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .Registrarse-Form {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .Registrarse-header {
+    font-size: 2rem;
+  }
+
+  .btn-registro {
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+// body {
+//   font-family: "Roboto", sans-serif;
+// }
+
+// .container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+//   background-color: #bbcddb;
+// }
+
+// .Registrarse-Form {
+//   box-sizing: border-box;
+//   padding: 20px;
+//   margin: 5% auto;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: #99b0c9;
+//   border-radius: 20px;
+//   width: 90%;
+//   max-width: 400px;
+// }
+
+// .Registrarse-header {
+//   color: #333;
+//   text-align: center;
+//   font-size: 3rem;
+//   margin-top: 20px;
+// }
+
+// .inputs {
+//   margin-top: 30px;
+// }
+
+// .btn-registro {
+//   height: 3rem;
+//   border-radius: 8px;
+//   align-items: center;
+//   margin-top: 20px;
+//   font-size: 1.3rem;
+//   color: white;
+//   margin: 5px;
+// }
+
+// .btn-guardar {
+//   background: limegreen;
+// }
+
+// .btn-cancelar {
+//   background: indianred;
+// }
+
+// @media (max-width: 768px) {
+//   .container {
+//     padding: 20px;
+//   }
+
+//   .Registrarse-Form {
+//     margin: 0 auto;
+//     width: 100%;
+//     height: auto;
+//   }
+
+//   .Registrarse-header {
+//     font-size: 2rem;
+//   }
+
+//   .btn-registro {
+//     height: 2.5rem;
+//     font-size: 1.2rem;
+//   }
+// }
+
+// .container {
+//   background-color: #bbcddb;
+//   background-size: 100vh;
+// }
+
+// .Registrarse-header {
+//   color: black;
+//   text-align: center;
+//   font-size: 300%;
+// }
+
+// .Registrarse-Form {
+//   box-sizing: border-box;
+//   padding-top: 10px;
+//   padding-bottom: 10%;
+//   margin: 5% auto;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: #99b0c9;
+//   border-radius: 20px;
+//   width: 350px;
+//   height: 330px;
+// }
+
+// .Registrarse-Form .btn-registro {
+//   height: 3vw;
+//   border-radius: 8px;
+//   align-items: center;
+//   margin-top: 20px;
+//   font-size: 1.3vw;
+//   color: white;
+//   margin-left: 5px;
+//   margin-right: 5px;
+// }
+
+// .Registrarse-Form .btn-guardar {
+//   background: limegreen;
+// }
+
+// .Registrarse-Form .btn-cancelar {
+//   background: indianred;
+// }
